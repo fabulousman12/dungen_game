@@ -1,7 +1,7 @@
 
 const MAP_WIDTH = 80;
 const MAP_HEIGHT = 80;
-const VIEWPORT_SIZE = 15;
+const VIEWPORT_SIZE = 30;
 const SIGHT_RANGE = 6;
 
 let map = [];
@@ -72,7 +72,9 @@ function render() {
   const game = document.createElement('div');
   game.id = 'game';
   game.style.display = 'grid';
-  game.style.gridTemplateColumns = `repeat(${VIEWPORT_SIZE}, 32px)`;
+game.style.gridTemplateColumns = `repeat(${VIEWPORT_SIZE}, 1fr)`;
+game.style.width = 'min(90vmin, 90vw, 90vh)';
+game.style.height = 'min(90vmin, 90vw, 90vh)';
 
   const half = Math.floor(VIEWPORT_SIZE / 2);
   const startX = Math.max(0, Math.min(MAP_WIDTH - VIEWPORT_SIZE, player.x - half));
