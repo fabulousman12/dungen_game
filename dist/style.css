@@ -1,0 +1,32 @@
+#game {
+    display: grid;
+    grid-template-columns: repeat(20, 32px);
+    grid-template-rows: repeat(20, 32px);
+    gap: 1px;
+    width: fit-content;
+    margin: 20px auto;
+  }
+  .cell {
+    width: 32px;
+    height: 32px;
+    box-sizing: border-box;
+    transition: background-color 0.2s ease;
+  }
+  .floor {
+    background-color: #ddd;
+  }
+  .wall {
+    background-color: #333;
+  }
+  .player {
+    background-color: #4caf50;
+    transition: transform 0.2s ease;
+  }
+  .monster {
+    background-color: #e53935;
+  }
+  #stats {
+    text-align: center;
+    margin-top: 10px;
+    font-family: monospace;
+  }

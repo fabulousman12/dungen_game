@@ -1,0 +1,100 @@
+/* Base layout */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100dvh;
+  width: 100vw;
+  font-family: sans-serif;
+  background-color: #111;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Root container */
+#root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Game grid container */
+#game {
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  width: 100vmin; /* Keeps it square */
+  height: 100vmin;
+  max-height: 70dvh;
+  max-width: 70dvh;
+  background: #222;
+}
+
+/* Grid cells */
+.cell {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  box-sizing: border-box;
+  border: 0.5px solid #111; /* Creates visual boundary */
+}
+
+/* Tile types */
+.floor {
+  background-color: #ddd;
+}
+.wall {
+  background-color: #333;
+}
+.player {
+  background-color: #4caf50;
+}
+.monster {
+  background-color: #e53935;
+}
+.powerup {
+  background-color: gold;
+}
+
+/* Stats */
+#stats {
+  text-align: center;
+  font-family: monospace;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* Mobile controls */
+#mobile-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.dpad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.dpad > div {
+  display: flex;
+  gap: 5px;
+}
+
+.dpad button {
+  font-size: 24px;
+  padding: 10px;
+  min-width: 50px;
+  border-radius: 8px;
+  border: none;
+  background: #444;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}

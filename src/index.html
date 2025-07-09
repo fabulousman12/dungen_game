@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tile Game</title>
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- Mobile controls -->
+  <div id="mobile-controls">
+    <div class="dpad">
+      <button onclick="movePlayer(0, -1)">⬆️</button>
+      <div>
+        <button onclick="movePlayer(-1, 0)">⬅️</button>
+        <button onclick="attack()">🗡️</button>
+        <button onclick="movePlayer(1, 0)">➡️</button>
+      </div>
+      <button onclick="movePlayer(0, 1)">⬇️</button>
+    </div>
+  </div>
+
+  <!-- Link to external JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
